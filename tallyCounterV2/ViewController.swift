@@ -72,7 +72,7 @@ class ViewController: UIViewController {
         resetButton.translatesAutoresizingMaskIntoConstraints = false
         
         editButton = UIButton(type: .system)
-        editButton.setTitle("Редактировать", for: .normal)
+        editButton.setTitle("Цель счетчика", for: .normal)
         editButton.addTarget(self, action: #selector(editTitle), for: .touchUpInside)
         editButton.translatesAutoresizingMaskIntoConstraints = false
         
@@ -158,9 +158,8 @@ class ViewController: UIViewController {
         }
     }
     @objc private func editTitle() {
-        let alertController = UIAlertController(title: "Редактировать название", message: nil, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Введите цель", message: nil, preferredStyle: .alert)
         alertController.addTextField { textField in
-            textField.placeholder = ""
         }
         
         let cancelAction = UIAlertAction(title: "Отменить", style: .cancel, handler: nil)
